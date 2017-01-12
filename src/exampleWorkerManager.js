@@ -51,18 +51,17 @@ ohmEditor.addListener('parse:grammar', function(_, g, err) {
 });
 
 ohmEditor.examples.addListener('set:example', function(_, oldValue, newValue) {
-  var grammar;
   if (newValue.text.trim() === '') {
     return;
-  } else if (oldValue && oldValue.text.trim() === '' ||
-             !oldValue) {
-    grammar = ohmEditor.grammar;
-    if (grammar.match(newValue.text, newValue.startRule).succeeded()) {
-      exampleWorkerManager.addUserExample(newValue.startRule || grammar.defaultStartRule,
-                                          newValue.text);
-    }
-  } else {
-    resetWorker(ohmEditor.grammar);
+  }
+
+  var g = ohmEditor.grammar;
+  if (oldValue && oldValue.text.trim() !== '') {
+    resetWorker(g);
+  } else if (g && g.match(newValue.text, newValue.startRule).succeeded()) {
+    exampleWorkerManager.addUserExample(
+        newValue.startRule || g.defaultStartRule,
+        newValue.text);
   }
 });
 

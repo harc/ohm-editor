@@ -73,7 +73,7 @@
     "vue": "2.1.8",
     "vue-loader": "10.0.2",
     "vue-template-compiler": "2.1.8",
-    "webpack": "^1.13.3",
+    "webpack": "^2.2.1",
     "webpack-dev-server": "^1.16.2",
     "worker-loader": "^0.7.1"
   },

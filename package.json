@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "checked-emitter": "^1.0.1",
-    "css-loader": "^0.26.0",
+    "css-loader": "^0.27.0",
     "electron-packager": "^8.4.0",
     "es6-object-assign": "^1.1.0",
     "eslint": "3.13.1",

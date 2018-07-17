@@ -77,7 +77,7 @@
     "vue-template-compiler": "2.4.4",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2",
-    "worker-loader": "^0.7.1"
+    "worker-loader": "^0.8.0"
   },
   "greenkeeper": {
     "ignore": [
